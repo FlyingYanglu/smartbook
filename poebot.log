@@ -1,0 +1,18 @@
+2024-11-12 22:47:19,487 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:47:19,649 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 12460 using 0 to output -3
+2024-11-12 22:47:23,572 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:47:23,575 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 43844 using 0 to output -3
+2024-11-12 22:47:29,323 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:47:29,327 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 18684 using 0 to output -3
+2024-11-12 22:49:38,950 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:49:38,953 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 1376 using 0 to output -3
+2024-11-12 22:49:42,566 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:49:42,570 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 17936 using 0 to output -3
+2024-11-12 22:49:43,742 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-12 22:49:43,745 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-12 22:51:53,382 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:51:53,385 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 45804 using 0 to output -3
+2024-11-12 22:51:56,943 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-12 22:51:56,946 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 70376 using 0 to output -3
+2024-11-12 22:51:58,021 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-12 22:51:58,026 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt

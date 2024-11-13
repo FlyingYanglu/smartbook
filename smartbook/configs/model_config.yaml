@@ -14,3 +14,28 @@ JianYing:
   User-Agent: "Cronet/TTNetVersion:d4572e53 2024-06-12 QuicVersion:4bf243e0 2023-04-17"
   tdid: "2804213176076372"
   speech_reader: "BV411_streaming"
+
+
+DataFetcher:
+
+  ConnectionConfig:
+    HOST: 'influx.linklab.virginia.edu'
+    PORT: 443
+    USERNAME: 'sahbf24'
+    PASSWORD: 'raighee7Ahpheej3eud2sheob7seey7'
+    DATABASE: 'gateway-generic'
+    SSL: True
+
+  QueryConfig:
+    timespan: 5m
+    Rooms:
+      - "211 Olsson"
+      - "217 Olsson"
+      - "225 Olsson"
+      - "251 Olsson"
+      - "204 Olsson"
+    Measurements:
+      - "Temperature_°C"
+      - "co2_ppm"
+      - "Illumination_lx"
+

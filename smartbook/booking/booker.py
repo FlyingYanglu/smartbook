@@ -6,12 +6,13 @@ from smartbook.booking.prompts import (
 )
 from smartbook.role import Role
 from smartbook.utils import extract_json_from_string
+from smartbook.data import Data
 import os
 import json
 import time
 
 class Booker(Role):
-    bot_id="booker"
+    bot_id="room_booker"
     
     def __init__(self, model, **kwargs):
         super().__init__(model, **kwargs)
@@ -19,9 +20,19 @@ class Booker(Role):
         self.role = "booker"
     
 
-    def Book(self, data_fetcher, user_request):
+    def book(self, data_fetcher: Data, user_request):
 
-        data = data_fetcher.query_data()
+        data = data_fetcher.collect_data()
+
+        prompt = ROOM_RANKING_PROMPT.format(user_request=user_request, room_data=data, example=ROOM_RANKING_EXAMPLE)
+        
+        new_chat = True
+
+        response = self.model(prompt, new_chat=new_chat, bot_id=self.bot_id, system_msg=BOOKER_ROLE + BOOKER_SYSTEM_MSG)
+
+        room_rank_json = extract_json_from_string(response)
+        return room_rank_json
+
 
         
 

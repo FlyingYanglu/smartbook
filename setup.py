@@ -15,6 +15,7 @@ setup(
         'natsort',
         'tqdm',
         'openai',
+        'influxdb',
         'PoePT @ git+https://github.com/FlyingYanglu/PoePT@main#egg=PoePT',  # Add GitHub dependency
     ],
     classifiers=[

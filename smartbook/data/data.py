@@ -1,36 +1,55 @@
 import influxdb
 from collections import defaultdict
+import yaml
+import json
 
-class Lab_Data:
+class Data:
+    def __init__(self, config_path="smartbook/configs/model_config.yaml"):
+        """
+        Initialize the Data object using parameters from a configuration file.
+        """
+        
+        # Load configuration from the specified YAML file
+        self.load_config(config_path)
 
-    def __init__(self, rooms, measurements, timespan='5m'): 
-        """
-        Initialize the Lab_Data object with InfluxDB connection
-        and setup for querying rooms and measurements.
-        """
-        # InfluxDB connection details
-        HOST = 'influx.linklab.virginia.edu'
-        PORT = 443
-        USERNAME = 'sahbf24'
-        PASSWORD = 'raighee7Ahpheej3eud2sheob7seey7'
-        DATABASE = 'gateway-generic'
-        
-        # Initialize the InfluxDB client
-        self.client = influxdb.InfluxDBClient(
-            HOST, PORT, USERNAME, PASSWORD, DATABASE, ssl=True, verify_ssl=True
-        )
-        
-        # Store the rooms and measurements
-        self.rooms = rooms
-        self.measurements = measurements
-        self.timespan = timespan
-        
         # Create a 2-dimensional map using defaultdict
         self.room_data = defaultdict(lambda: defaultdict(float))
 
+    def load_config(self, config_path):
+
+        # Load configuration from the specified YAML file
+        with open(config_path, 'r') as file:
+            config = yaml.safe_load(file)
+
+        # Extract InfluxDB connection details from the configuration
+        connection_config = config['DataFetcher']['ConnectionConfig']
+        self.host = connection_config['HOST']
+        self.port = connection_config['PORT']
+        self.username = connection_config['USERNAME']
+        self.password = connection_config['PASSWORD']
+        self.database = connection_config['DATABASE']
+        self.ssl = connection_config['SSL']
+
+        # Initialize the InfluxDB client using config parameters
+        self.client = influxdb.InfluxDBClient(
+            host=self.host,
+            port=self.port,
+            username=self.username,
+            password=self.password,
+            database=self.database,
+            ssl=self.ssl,
+            verify_ssl=True
+        )
+
+        # Extract query configuration details from the configuration
+        query_config = config['DataFetcher']['QueryConfig']
+        self.rooms = query_config['Rooms']
+        self.measurements = query_config['Measurements']
+        self.timespan = query_config['timespan']
+
     def query(self, room, measurement):
         """
-        Query the InfluxDB for a specific room and measurement
+        Query the InfluxDB for a specific room and measurement.
         """
         query = (
             f'SELECT mean(value) FROM "{measurement}" '
@@ -53,16 +72,37 @@ class Lab_Data:
             self.room_data[room][measurement] = avg
         else:
             self.room_data[room][measurement] = None
+    
+    
+    def format_data(self, data):
+        """
+        Format self.room_data (a nested defaultdict) into a JSON string with a newline after each room's entry.
+        """
+        # Convert defaultdict to a regular dict for JSON serialization
+        formatted_data = {room: dict(readings) for room, readings in data.items()}
 
-    def collect_data(self):
+        # Serialize the data with a newline after each room's entry
+        json_lines = [f'"{room}": {json.dumps(readings, ensure_ascii=False)}' for room, readings in formatted_data.items()]
+        return '{' + ',\n'.join(json_lines) + '}\n'
+    
+    
+    def collect_data(self, formatter=None):
         """
-        Collect data for all rooms and measurements
+        Collect data for all rooms and measurements, using format_data by default.
         """
+        # If no formatter is provided, use the default format_data method
+        if formatter is None:
+            formatter = self.format_data
+
+        # Collect data for each room and measurement
         for room in self.rooms:
             for measurement in self.measurements:
                 self.query(room, measurement)
-
-        return self.room_data
+        
+        # Format the data using the formatter
+        return formatter(self.room_data)
+    
+    
 
     def display_data(self):
         """Display the collected data."""
@@ -77,17 +117,11 @@ class Lab_Data:
             print("-" * 30)
 
 
-'''
-# List of rooms and measurements to query
-rooms = ['211 Olsson', '217 Olsson', '225 Olsson', '251 Olsson', '204 Olsson']
-measurements = ['Temperature_°C', 'co2_ppm', 'Illumination_lx']
+# # Usage Example
+# # Initialize the Data class with the path to the YAML configuration file
+# config_path = 'path/to/your/config.yaml'
+# lab_data = Data(config_path)
 
-# Initialize the Lab_Data class with rooms and measurements
-lab_data = Lab_Data(rooms, measurements, '1d')
-
-# Collect data for all specified rooms and measurements, return a 2d dict
-lab_data.collect_data()
-
-# Display the collected data
-lab_data.display_data()
-'''
+# # Collect and display data
+# lab_data.collect_data()
+# lab_data.display_data()

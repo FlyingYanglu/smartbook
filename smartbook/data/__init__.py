@@ -1,2 +1,2 @@
-from smartbook.data.data import Lab_Data
+from smartbook.data.data import Data
 
