@@ -1,0 +1,24 @@
+Poe:
+  email: 
+    - llu430173@gmail.com
+    - luke.yangluhb@gmail.com
+    - yang_huibo@outlook.com
+    - lluke6025@gmail.com
+    - lu4431928@gmail.com
+    - yhb19991115@gmail.com
+    - legolukeluke3@gmail.com
+
+Deepseek:
+  api_key: xxx
+  base_url: https://api.deepseek.com
+
+OpenAI:
+  api_key: xxx
+  base_url: https://api.openai.com 
+
+Midjourney:
+  APPLICATION_ID: xxx
+  CHANNEL_ID: xx
+  VERSION: xx
+  ID: xx
+  AUTHORIZATION: xxx

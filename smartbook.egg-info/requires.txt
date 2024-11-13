@@ -1,0 +1,4 @@
+natsort
+tqdm
+openai
+PoePT@ git+https://github.com/FlyingYanglu/PoePT@main#egg=PoePT

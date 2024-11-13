@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: smartbook
+Version: 0.0.1
+Summary: Visual Novel Generator
+Home-page: 
+Author: HY YC
+Author-email: 
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: natsort
+Requires-Dist: tqdm
+Requires-Dist: openai
+Requires-Dist: PoePT@ git+https://github.com/FlyingYanglu/PoePT@main#egg=PoePT

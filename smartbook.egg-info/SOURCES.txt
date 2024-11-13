@@ -1,0 +1,9 @@
+setup.py
+smartbook/__init__.py
+smartbook/errors.py
+smartbook/role.py
+smartbook.egg-info/PKG-INFO
+smartbook.egg-info/SOURCES.txt
+smartbook.egg-info/dependency_links.txt
+smartbook.egg-info/requires.txt
+smartbook.egg-info/top_level.txt

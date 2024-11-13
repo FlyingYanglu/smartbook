@@ -1,0 +1,16 @@
+Diffusion:
+  model_name: "cagliostrolab/animagine-xl-3.1"
+  model_path: "E:/OneDrive/Documents/Workspace/vision novel/stable-diffusion-webui/models/Stable-diffusion/animagine-xl-3.1.safetensors"
+
+TTS:
+  speed_factor: 0.75
+  audio_format: "mp3"
+
+JianYing:
+  Host: "lv-pc-api-sinfonlinec.ulikecam.com"
+  appvr: "6.6.0"
+  pf: "4"
+  sign-ver: "1"
+  User-Agent: "Cronet/TTNetVersion:d4572e53 2024-06-12 QuicVersion:4bf243e0 2023-04-17"
+  tdid: "2804213176076372"
+  speech_reader: "BV411_streaming"
