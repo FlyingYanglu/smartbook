@@ -7,7 +7,8 @@ from poept.exceptions import ToomanyRequestsException, TimeoutException, TooLong
 
 class Poe(BaseLLM):
     def __init__(self, email_account=CONFIG["Poe"]["email"], **kwargs):
-        self.bot = PoePT(headless = kwargs.get("headless", False))
+        self.headless = kwargs.get("headless", True)
+        self.bot = PoePT(headless = self.headless)
         self.construct_email_dict(email_account)
         self.current_email = None
         self.switch_email()
@@ -32,7 +33,7 @@ class Poe(BaseLLM):
         print("Switching email")
         if self.bot is not None:
             self.bot.close()
-            self.bot = PoePT()
+            self.bot = PoePT(headless = self.headless)
         if self.current_email is not None:
             
             if not rate_limit:

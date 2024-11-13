@@ -16,3 +16,71 @@
 2024-11-12 22:51:56,946 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 70376 using 0 to output -3
 2024-11-12 22:51:58,021 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
 2024-11-12 22:51:58,026 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 00:57:52,237 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 00:57:52,240 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 29252 using 0 to output -3
+2024-11-13 00:57:55,871 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 00:57:55,874 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 9644 using 0 to output -3
+2024-11-13 00:57:57,002 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 00:57:57,007 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 00:58:01,643 - ERROR - Exception occurred in ask method: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7374D38A5+3004357]
+	(No symbol) [0x00007FF737169970]
+	(No symbol) [0x00007FF73701582A]
+	(No symbol) [0x00007FF73701C2E2]
+	(No symbol) [0x00007FF73701E637]
+	(No symbol) [0x00007FF73701E6F0]
+	(No symbol) [0x00007FF73706563A]
+	(No symbol) [0x00007FF737065E7C]
+	(No symbol) [0x00007FF73705979C]
+	(No symbol) [0x00007FF73708BC1F]
+	(No symbol) [0x00007FF7370592A6]
+	(No symbol) [0x00007FF73708BDF0]
+	(No symbol) [0x00007FF7370ABA4C]
+	(No symbol) [0x00007FF73708B983]
+	(No symbol) [0x00007FF737057628]
+	(No symbol) [0x00007FF737058791]
+	GetHandleVerifier [0x00007FF7374FA00D+3161901]
+	GetHandleVerifier [0x00007FF73754E060+3506048]
+	GetHandleVerifier [0x00007FF73754400D+3465005]
+	GetHandleVerifier [0x00007FF7372C0EEB+830987]
+	(No symbol) [0x00007FF73717467F]
+	(No symbol) [0x00007FF7371709D4]
+	(No symbol) [0x00007FF737170B6D]
+	(No symbol) [0x00007FF737160149]
+	BaseThreadInitThunk [0x00007FFE4BD9257D+29]
+	RtlUserThreadStart [0x00007FFE4D5AAF08+40]
+
+2024-11-13 00:58:24,944 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 00:58:24,948 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 3160 using 0 to output -3
+2024-11-13 01:04:23,784 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:04:23,788 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 58624 using 0 to output -3
+2024-11-13 01:04:27,760 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:04:27,764 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 26424 using 0 to output -3
+2024-11-13 01:04:28,974 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:04:28,976 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:15:45,812 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:15:45,812 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 6676 using 0 to output -3
+2024-11-13 01:15:49,310 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:15:49,316 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 37516 using 0 to output -3
+2024-11-13 01:15:50,470 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:15:50,473 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:16:41,845 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:16:41,849 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 18280 using 0 to output -3
+2024-11-13 01:16:45,306 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:16:45,310 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 28812 using 0 to output -3
+2024-11-13 01:16:46,461 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:16:46,464 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:18:27,512 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:18:27,516 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 53536 using 0 to output -3
+2024-11-13 01:18:30,856 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:18:30,859 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 28568 using 0 to output -3
+2024-11-13 01:18:31,890 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:18:31,893 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:18:49,556 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:18:49,560 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 36012 using 0 to output -3
+2024-11-13 01:18:53,033 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe
+2024-11-13 01:18:53,038 - DEBUG - Started executable: `D:\Programs\Conda\envs\smartbook\Lib\site-packages\seleniumbase\drivers/chromedriver.exe` in a child process with pid: 60440 using 0 to output -3
+2024-11-13 01:18:54,128 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
+2024-11-13 01:18:54,130 - INFO - Existing cookies found at ./saved_cookies/cookies_llu430173@gmail.com.txt
