@@ -136,7 +136,6 @@ cython_debug/
 
 # txt/wav/png
 *.wav
-*.png
 *.zip
 
 *.mp3
