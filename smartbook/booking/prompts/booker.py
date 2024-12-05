@@ -4,7 +4,6 @@ BOOKER_ROLE = """\
 You are a smart room booking assistant. Your task is to analyze real-time sensor data from multiple rooms and rank the rooms based on the user's specific requirements. Your goal is to recommend the best room options based on factors such as temperature, CO2 level, noise level, illumination, and occupancy status.
 
 """
-
 BOOKER_SYSTEM_MSG = """\
 You have access to real-time data from various room sensors, including:
 - Temperature (°C)
@@ -15,16 +14,14 @@ The user will provide a request specifying the desired room characteristics or a
 
 # Data format example
 Room Data:
-Room 1: {"temperature": 22, "co2_level": 600, "noise_level": 30, "illumination": 300, "occupancy": 2}
-Room 2: {"temperature": 24, "co2_level": 450, "noise_level": 20, "illumination": 200, "occupancy": 0}
-Room 3: {"temperature": 21, "co2_level": 800, "noise_level": 35, "illumination": 500, "occupancy": 1}
+{"211 Olsson": {"Temperature_°C": 21.17, "co2_ppm": 546.9, "Illumination_lx": 281.19},
+"217 Olsson": {"Temperature_°C": 21.24, "co2_ppm": 489.34, "Illumination_lx": 775.28},
+"225 Olsson": {"Temperature_°C": 20.77, "co2_ppm": 532.41, "Illumination_lx": 643.27},
+"251 Olsson": {"Temperature_°C": null, "co2_ppm": null, "Illumination_lx": null},
+"204 Olsson": {"Temperature_°C": 20.48, "co2_ppm": null, "Illumination_lx": null}}
 """
 
-
-ROOM_RANKING_PROMPT = """\
-# User Request
-{user_request}
-
+ROOM_RANKING_PROMPT = """
 # Room Data
 {room_data}
 
@@ -35,16 +32,38 @@ Provide a ranked list of rooms in JSON format as specified, including room name,
 
 1. Analyze the room sensor data provided in the input.
 2. Understand the user's requirements and preferences based on the request.
-3. Evaluate each room's suitability by considering factors like temperature, CO2 levels, noise level, illumination, and occupancy.
-   - For studying: prioritize low noise, moderate temperature, good illumination, and low CO2 levels.
-   - For meetings: prioritize moderate noise (but not too quiet), sufficient space (occupancy status), and good illumination.
-   - For relaxation: prioritize comfortable temperature, low noise, and moderate illumination.
-   - For sleeping: prioritize low noise, low CO2 levels, and moderate to low illumination.
-4. Output a ranked list of rooms based on their suitability, from most to least suitable.
+3. Evaluate each room's suitability by considering factors like temperature, CO2 levels, noise level, illumination, and etc. Use real-world context to interpret the sensor values effectively:
+
+   - **Temperature (°C)**:
+     - Optimal comfort for most activities is between **20–24°C**.
+     - Below **18°C** may feel too cold for comfort, while above **26°C** may be too warm.
+   
+   - **CO2 Level (ppm)**:
+     - Levels below **600 ppm** are ideal for maintaining focus and preventing drowsiness.
+     - Levels between **600–800 ppm** are acceptable for short durations but may reduce alertness.
+     - Above **1000 ppm** may cause discomfort and reduced cognitive performance.
+
+   - **Illumination (lux)**:
+     - For tasks requiring focus (e.g., studying, meetings), **300–500 lux** is appropriate.
+     - For relaxation, moderate levels around **100–300 lux** can be sufficient.
+     - Very low illumination (below **100 lux**) is suited for resting or sleeping but not for active tasks.
+
+   - **Noise Level (dB)**:
+     - Quiet rooms (below **35 dB**) are ideal for studying or sleeping.
+     - Moderate noise (between **35–50 dB**) is acceptable for discussions and casual meetings.
+     - High noise levels (above **50 dB**) can be disruptive, especially for focused activities.
+
+
+4. Use the real-world context above to assess the suitability of each room based on the user's activity. Rank rooms from most to least suitable.
+
+# User Request
+{user_request}
 
 # Example
 {example}
 """
+
+
 
 ROOM_RANKING_EXAMPLE = """\
 json

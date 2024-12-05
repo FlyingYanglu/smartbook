@@ -27,15 +27,13 @@ DataFetcher:
     SSL: True
 
   QueryConfig:
-    timespan: 5m
+    timespan: 1h
     Rooms:
       - "211 Olsson"
       - "217 Olsson"
       - "225 Olsson"
       - "251 Olsson"
       - "204 Olsson"
-    Measurements:
-      - "Temperature_°C"
-      - "co2_ppm"
-      - "Illumination_lx"
+    num_decimals: 2
+    measurements_config_path: "smartbook/booking/measurements/measurements.yaml"
 

@@ -1,8 +1,5 @@
 from setuptools import setup
 
-with open('readme.md', 'r', encoding="utf-8") as f:
-    readme = f.read()
-
 setup(
     name='smartbook',
     version='0.0.1',
@@ -16,6 +13,9 @@ setup(
         'tqdm',
         'openai',
         'influxdb',
+        'flask',
+        'celery',
+        'redis',
         'PoePT @ git+https://github.com/FlyingYanglu/PoePT@main#egg=PoePT',  # Add GitHub dependency
     ],
     classifiers=[

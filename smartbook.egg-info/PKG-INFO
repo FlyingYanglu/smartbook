@@ -16,4 +16,5 @@ Classifier: Programming Language :: Python :: 3.9
 Requires-Dist: natsort
 Requires-Dist: tqdm
 Requires-Dist: openai
+Requires-Dist: influxdb
 Requires-Dist: PoePT@ git+https://github.com/FlyingYanglu/PoePT@main#egg=PoePT

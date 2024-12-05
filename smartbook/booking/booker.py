@@ -20,7 +20,7 @@ class Booker(Role):
         self.role = "booker"
     
 
-    def book(self, data_fetcher: Data, user_request):
+    def book(self, data_fetcher: Data, user_request, return_data=False):
 
         data = data_fetcher.collect_data()
 
@@ -31,6 +31,32 @@ class Booker(Role):
         response = self.model(prompt, new_chat=new_chat, bot_id=self.bot_id, system_msg=BOOKER_ROLE + BOOKER_SYSTEM_MSG)
 
         room_rank_json = extract_json_from_string(response)
+
+        if return_data:
+            return room_rank_json, data
+        return room_rank_json
+    
+    async def book_async(self, data_fetcher, user_request, return_data=False):
+        # Fetch data asynchronously
+        data = await data_fetcher.collect_data()
+
+        # Prepare the prompt
+        prompt = ROOM_RANKING_PROMPT.format(
+            user_request=user_request, room_data=data, example=ROOM_RANKING_EXAMPLE
+        )
+
+        new_chat = True
+
+        # Generate response asynchronously
+        response = await self.model(
+            prompt, new_chat=new_chat, bot_id=self.bot_id, system_msg=BOOKER_ROLE + BOOKER_SYSTEM_MSG
+        )
+
+        # Process the response
+        room_rank_json = extract_json_from_string(response)
+
+        if return_data:
+            return room_rank_json, data
         return room_rank_json
 
 

@@ -1,0 +1,5 @@
+sudo service redis-server start
+celery -A test_1.tasks worker --loglevel INFO
+// python test_1/app.py
+// python -m test_1.app
+pytest -s test_1/pytest.py

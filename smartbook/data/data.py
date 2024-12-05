@@ -2,6 +2,7 @@ import influxdb
 from collections import defaultdict
 import yaml
 import json
+import time
 
 class Data:
     def __init__(self, config_path="smartbook/configs/model_config.yaml"):
@@ -12,8 +13,14 @@ class Data:
         # Load configuration from the specified YAML file
         self.load_config(config_path)
 
+
         # Create a 2-dimensional map using defaultdict
         self.room_data = defaultdict(lambda: defaultdict(float))
+
+    def load_measurements_config(self, measurements_config_path):
+        with open(measurements_config_path, 'r', encoding="utf-8") as file:
+            measurements_config = yaml.safe_load(file)
+        self.measurements = measurements_config['metrics']
 
     def load_config(self, config_path):
 
@@ -44,8 +51,9 @@ class Data:
         # Extract query configuration details from the configuration
         query_config = config['DataFetcher']['QueryConfig']
         self.rooms = query_config['Rooms']
-        self.measurements = query_config['Measurements']
         self.timespan = query_config['timespan']
+        self.num_decimals = query_config['num_decimals']
+        self.load_measurements_config(query_config['measurements_config_path'])
 
     def query(self, room, measurement):
         """
@@ -69,6 +77,7 @@ class Data:
         # Store the result in the room_data dictionary
         if cnt > 0:
             avg = val / cnt
+            avg = round(avg, self.num_decimals)
             self.room_data[room][measurement] = avg
         else:
             self.room_data[room][measurement] = None
@@ -91,16 +100,27 @@ class Data:
         Collect data for all rooms and measurements, using format_data by default.
         """
         # If no formatter is provided, use the default format_data method
-        if formatter is None:
-            formatter = self.format_data
-
+        
         # Collect data for each room and measurement
         for room in self.rooms:
             for measurement in self.measurements:
                 self.query(room, measurement)
+
+        # Return the formatted data
+        return self.return_data(formatter)
         
+    def return_data(self, formatter=None):
+        
+        if formatter is None:
+            formatter = self.format_data
+
         # Format the data using the formatter
-        return formatter(self.room_data)
+        formated_data = formatter(self.room_data)
+
+        # add current time in %H:%M:%S to the data
+        cur_time = "Current Time: " + time.strftime('%H:%M:%S')
+        formated_data = cur_time + "\n" + formated_data
+        return formated_data
     
     
 

@@ -1,0 +1,47 @@
+metrics:
+  Temperature_°C:
+      description: |
+        Optimal comfort for most activities is between 20–24°C.
+        Below 18°C may feel too cold for comfort, while above 26°C may be too warm.
+  co2_ppm:
+      description: |
+        Levels below 600 ppm are ideal for maintaining focus and preventing drowsiness.
+        Levels between 600–800 ppm are acceptable for short durations but may reduce alertness.
+        Above 1000 ppm may cause discomfort and reduced cognitive performance.
+  Illumination_lx:
+      description: |
+        Optimal illumination for reading and studying is between 300–500 lx.
+        Levels below 200 lx may be too dim and cause eye strain, while above 750 lx may cause glare.
+  Humidity_%:
+      description: |
+        Comfortable humidity levels range from 30–50%.
+        Levels below 30% can cause dry skin and discomfort, while above 60% may lead to a muggy environment and promote mold growth.
+  occupancy_count:
+      description: |
+        Indicates the number of people present in the room.
+        Higher occupancy can affect air quality and noise levels, potentially reducing comfort and focus.
+  spl_A:
+      description: |
+        Sound levels measured in A-weighted decibels (dB(A)).
+        For a quiet study environment, levels below 35 dB(A) are ideal.
+        Prolonged exposure to levels above 55 dB(A) can disrupt concentration.
+  voc_ppb:
+      description: |
+        Volatile Organic Compounds (VOCs) levels below 200 ppb are considered good.
+        Levels between 200–500 ppb may indicate the presence of potential pollutants.
+        Consistently high levels (above 1000 ppb) can pose health risks.
+  pm2.5_μg/m3:
+      description: |
+        Particulate matter (PM2.5) levels should be below 12 μg/m³ for good air quality.
+        Levels between 12–35 μg/m³ are moderate, but prolonged exposure may cause health concerns.
+        Levels above 35 μg/m³ indicate poor air quality and potential respiratory risks.
+  pm10.0_μg/m3:
+      description: |
+        Particulate matter (PM10) levels should be below 20 μg/m³ for good air quality.
+        Levels between 20–50 μg/m³ are moderate but may affect sensitive groups.
+        Levels above 50 μg/m³ indicate poor air quality and may impact health.
+  motion_last_minute:
+      description: |
+        Indicates movement detected within the last minute.
+        Can be used to assess activity levels, security, or room utilization.
+        A high count suggests significant motion, while zero indicates stillness.
