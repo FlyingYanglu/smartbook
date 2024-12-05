@@ -1,0 +1,38 @@
+Participant 1:
+Setup: The participant used a laptop to interact with the SmartBook system in a study environment.
+Recruitment: The participant is my friend.
+Request: I want a bright room to study for my exams.
+Final chose Room: 211 Olsson | Rank: 2 | Score: 70 | Reason: Comfortable temperature but high CO2 level and no illumination recorded. Noise level is unknown but might be a concern.
+User Rating: 7
+Complete Recommendations:
+  - Room: 225 Olsson | Rank: 1 | Score: 85 | Reason: Moderate temperature, low CO2 level, but illumination is unavailable. However, it is the best option due to acceptable conditions.
+  - Room: 211 Olsson | Rank: 2 | Score: 70 | Reason: Comfortable temperature but high CO2 level and no illumination recorded. Noise level is unknown but might be a concern.
+  - Room: 251 Olsson | Rank: 3 | Score: 50 | Reason: Temperature is moderate, but CO2 and illumination data are missing. Overall suitability is low due to unknown factors.
+  - Room: 217 Olsson | Rank: 4 | Score: 0 | Reason: All sensor data is unavailable, making it impossible to assess suitability.
+  - Room: 204 Olsson | Rank: 5 | Score: 0 | Reason: All sensor data is unavailable, making it impossible to assess suitability.
+Questions and Answers:
+  Q: Compare to traditional booking systems, how do you like this one?
+  A: The system is a good idea, and I appreciate how it truly understands my needs. It not only provided me with a room that had good lighting as I requested, but also took into account factors I didn’t explicitly mention, like the room's quietness, and recommended a relatively quiet space. However, when we went to the room ranked as 1, we found that it was occupied, so we had to use the room ranked as 2 instead. While traditional booking systems also lack this feature, it would be very convenient if the system could detect whether a room is currently in use in real-time. Adding such functionality would save users time and enhance the overall experience.
+  Q: Any feedback and suggestions?
+  A: The system could benefit from better visualization, such as including images or a floor plan for each room. Additionally, as I mentioned earlier, it would be even better if the system could include a real-time update feature to show the current occupancy status of rooms. This addition would greatly enhance convenience and save users time when making decisions.
+
+
+--------------------------------------------------
+Participant 2:
+Setup: The participant used a smartphone to interact with the SmartBook system during a coffee break.
+Recruitment: The participant is a software developer recruited via a professional social media post.
+Request: Searching for a room with minimal distractions for coding.
+Top Room: 225 Olsson | Score: 90 | Reason: Low CO2 level, comfortable temperature, and no occupancy. Ideal for minimal distractions.
+User Rating: 8
+Complete Recommendations:
+  - Room: 225 Olsson | Rank: 1 | Score: 90 | Reason: Low CO2 level, comfortable temperature, and no occupancy. Ideal for minimal distractions.
+  - Room: 251 Olsson | Rank: 2 | Score: 80 | Reason: Temperature is moderate, but CO2 and illumination data are unavailable. Potentially suitable for coding.
+  - Room: 211 Olsson | Rank: 3 | Score: 70 | Reason: Higher CO2 level and no illumination data. Occupancy is unknown, which may affect distraction levels.
+  - Room: 204 Olsson | Rank: 4 | Score: 60 | Reason: Data is incomplete for evaluation. Cannot determine suitability for coding.
+  - Room: 217 Olsson | Rank: 5 | Score: 50 | Reason: Data is unavailable for temperature, CO2, and illumination. Not suitable for coding.
+Questions and Answers:
+  Q: Compare to traditional booking systems, how do you like this one?
+  A: This system is quite innovative and convenient. It’s amazing how I can simply type a natural language request, and it understands exactly what I need. The ranked suggestions save a lot of time compared to manually filtering through options in traditional booking systems. However, it could be improved with a few additional features, like displaying photos of the rooms or real-time availability. Overall, I think it’s a significant improvement.
+  Q: Any feedback and suggestions?
+  A: I’d suggest adding more detailed information about the rooms, such as photos and dimensions. Another useful addition would be a real-time availability feature, which would help users make quicker decisions. Also, integrating user reviews or feedback for each room would make the recommendations more reliable.
+--------------------------------------------------
